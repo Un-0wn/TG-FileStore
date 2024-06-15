@@ -4,13 +4,13 @@ import os
 
 
 class Config(object):
-	API_ID = int(os.environ.get("API_ID", "0"))
-	API_HASH = os.environ.get("API_HASH")
-	BOT_TOKEN = os.environ.get("BOT_TOKEN")
+	API_ID = int(os.environ.get("API_ID", "1382752"))
+	API_HASH = os.environ.get("API_HASH", "073e714e0fefd78b160510a4e72c6b18")
+	BOT_TOKEN = os.environ.get("BOT_TOKEN","7320395583:AAGK1fxOZHZi25m10CbiHSf6-DcykXeLaIc")
 	BOT_USERNAME = os.environ.get("BOT_USERNAME")
-	DB_CHANNEL = int(os.environ.get("DB_CHANNEL", "-100"))
-	BOT_OWNER = int(os.environ.get("BOT_OWNER", "1445283714"))
-	DATABASE_URL = os.environ.get("DATABASE_URL")
+	DB_CHANNEL = int(os.environ.get("DB_CHANNEL", "-1002147965931"))
+	BOT_OWNER = int(os.environ.get("BOT_OWNER", "1913299756"))
+	DATABASE_URL = os.environ.get("DATABASE_URL","mongodb+srv://twicedistrict4510:ynPONdILzjXrutxg@cluster0.jozwgpm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 	UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL", "")
 	LOG_CHANNEL = os.environ.get("LOG_CHANNEL", None)
 	BANNED_USERS = set(int(x) for x in os.environ.get("BANNED_USERS", "1234567890").split())
