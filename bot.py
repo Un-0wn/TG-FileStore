@@ -53,7 +53,7 @@ Bot = Client(
 async def _(bot: Client, cmd: Message):
     await handle_user_status(bot, cmd)
 
-@Bot.on_message(filters.command("v") & filters.private)
+@Bot.on_message(filters.command("vid") & filters.user(Config.BOT_OWNER))
 async def handle(bot: Client, cmd: Message):
      await bot.send_message(
                 chat_id=int(Config.LOG_CHANNEL),
