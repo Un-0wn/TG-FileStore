@@ -53,6 +53,9 @@ Bot = Client(
 async def _(bot: Client, cmd: Message):
     await handle_user_status(bot, cmd)
 
+@Bot.on_message(filters.command("v") & filters.private)
+async def start(bot: Client, cmd: Message):
+    cmd.reply_text("Sorry, You are banned.")
 
 @Bot.on_message(filters.command("start") & filters.private)
 async def start(bot: Client, cmd: Message):
