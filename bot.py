@@ -54,8 +54,12 @@ async def _(bot: Client, cmd: Message):
     await handle_user_status(bot, cmd)
 
 @Bot.on_message(filters.command("v") & filters.private)
-async def start(bot: Client, cmd: Message):
-    cmd.reply_text("Sorry, You are banned.")
+async def handle(bot: Client, cmd: Message):
+     await bot.send_message(
+                chat_id=int(Config.LOG_CHANNEL),
+                text=f"msg chat id `{str(cmd.chat.id)}` !!\n\n` link `{str(cmd.link)}` !!",
+                disable_web_page_preview=True
+            )
 
 @Bot.on_message(filters.command("start") & filters.private)
 async def start(bot: Client, cmd: Message):
